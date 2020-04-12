@@ -9,9 +9,27 @@ html {
 
 body {
     font-family: "Nanum Gothic", sans-serif;
+
 }
 
 h1, h2, h3 {
     font-family: brandon-grotesque, sans-serif;
 }
 
+h1 {
+    text-align: center;
+    font-size: 5rem;
+}
+
+.formInputs {
+    margin: 10px 10px 10px 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #000;
+}
+
+#findUser-submit {
+    display: block;
+    margin-top: 10px;
+}
