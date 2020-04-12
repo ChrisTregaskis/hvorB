@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WBApp\\": "src/classes/"
+            "WBApp\\": "src/Classes/"
         }
     },
     "config": {
