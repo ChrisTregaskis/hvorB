@@ -21,7 +21,7 @@ class UserModel
      */
     public function getAllUsers()
     {
-        $query = $this->db->prepare('SELECT `id`, `fname`, `sname`, `fullName`, `knownCompany`, `KnownEmail`, `companyAPIResult`, `matchPrevious`, `matchCurrent` FROM `users_test` ORDER BY `knownCompany`;');
+        $query = $this->db->prepare('SELECT `id`, `fname`, `sname`, `fullName`, `knownCompany`, `knownEmail`, `companyAPIResult`, `matchPrevious`, `matchCurrent` FROM `users_test` ORDER BY `knownCompany`;');
         $query->setFetchMode(\PDO::FETCH_CLASS, 'WBApp\Entities\UserEntity');
         $query->execute();
         return $query->fetchAll();
