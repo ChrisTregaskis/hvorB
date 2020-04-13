@@ -17,7 +17,7 @@ class UserEntity extends ValidationEntity implements \JsonSerializable
     public function __construct(
         $fname = null,
         $sname = null,
-        $fullName = null, 
+        $fullName = null,
         $knownCompany = null,
         $companyAPIResult = null,
         $matchPrevious = null,
@@ -66,8 +66,90 @@ class UserEntity extends ValidationEntity implements \JsonSerializable
         $this->fullName = self::sanitiseString($this->fullName);
         $this->knownCompany = self::sanitiseString($this->knownCompany);
         $this->companyAPIResult = self::sanitiseString($this->companyAPIResult);
-        $this->matchPrevious = (int) ($this->matchPrevious);
-        $this->matchCurrent = (int) ($this->matchCurrent);
+        $this->matchPrevious = (bool) ($this->matchPrevious);
+        $this->matchCurrent = (bool) ($this->matchCurrent);
 
     }
+
+    /** Get user id
+     *
+     * @return mixed
+     */
+    public function getUserId()
+    {
+        return $this->id;
+    }
+
+    /** Get user first name
+     *
+     * @return string
+     */
+    public function getUserFName(): string
+    {
+        return $this->fname;
+    }
+
+    /** Get user surname
+     *
+     * @return string
+     */
+    public function getUserSName(): string
+    {
+        return $this->sname;
+    }
+
+    /** Get user full name
+     *
+     * @return string
+     */
+    public function getUserFullName(): string
+    {
+        return $this->fullName;
+    }
+
+    /** Get user known company
+     *
+     * @return string
+     */
+    public function getUserKnownCompany(): string
+    {
+        return $this->knownCompany;
+    }
+
+    /** Get user known email
+     *
+     * @return mixed
+     */
+    public function getUserKnownEmail()
+    {
+        return $this->knownEmail;
+    }
+
+    /** Get user last company api result
+     *
+     * @return string
+     */
+    public function getUserCompanyAPIResult(): string
+    {
+        return $this->companyAPIResult;
+    }
+
+    /** Get bool saying if current known company matches any previous company
+     *
+     * @return bool
+     */
+    public function getUserMatchPrevious()
+    {
+        return $this->matchPrevious;
+    }
+
+    /** Get bool saying if current known company matches current api call company
+     *
+     * @return
+     */
+    public function getUserMatchCurrent()
+    {
+        return $this->matchCurrent;
+    }
+
 }
