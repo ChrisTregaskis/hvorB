@@ -1,3 +1,64 @@
 * {
-    color: red;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Nanum Gothic", sans-serif;
+
+}
+
+h1, h2, h3, h4 {
+    font-family: brandon-grotesque, sans-serif;
+}
+
+.container {
+    overflow: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
+}
+
+.formInputs {
+    margin: 10px 10px 10px 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #000;
+}
+
+#findUser-submit {
+    display: block;
+    margin: 10px 0;
+}
+
+.findUserResultsBox {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #28a745;
+    border-radius: 5px;
+}
+
+.findUserResultItem {
+    margin: 5px 5px 5px 0;
+    display: inline-block;
+}
+
+.currentUsersTitle {
+    display: inline-block;
+}
+
+#update-match {
+    float: right;
+    display: inline-block;
+}
+
+.table-row {
+    cursor: pointer;
 }
