@@ -20,5 +20,6 @@ return function (App $app) {
         return $container->get('renderer')->render($response, 'users.phtml', $args);
     });
 
+    $app->get('/displayUsers', 'DisplayUsersController');
 
 };

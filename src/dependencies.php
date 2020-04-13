@@ -29,4 +29,7 @@ return function (App $app) {
         return $db;
     };
 
+    $container['UserModel'] = new \WBApp\Factories\UserModelFactory();
+    $container['DisplayUsersController'] = new \WBApp\Factories\DisplayUsersControllerFactory();
+
 };
