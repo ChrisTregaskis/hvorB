@@ -42,21 +42,7 @@
                     <th>Name</th>
                     <th>Company</th>
                     <th>Email</th>
-                    <th>Match</th>
-                </tr>
-                <!-- static version for build. To be placed in viewHelper -->
-                <tr class="table-row" data-id="X">
-                    <td>Full Name</td>
-                    <td>Another Company</td>
-                    <td>person@company.com</td>
-                    <td>True</td>
-                </tr>
-                <!-- table-warning to be placed using IF statment to check if matchCurrent true -->
-                <tr class="table-row table-warning" data-id="X">
-                    <td>Another Name</td>
-                    <td>Company Ltd</td>
-                    <td>email@email.com</td>
-                    <td>False</td>
+                    <th class="apiMatch">API Match</th>
                 </tr>
                 <?php echo \WBApp\ViewHelpers\UsersViewHelper::displayUsers($data) ?>
             </tbody>
