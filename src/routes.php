@@ -15,4 +15,10 @@ return function (App $app) {
         return $container->get('renderer')->render($response, 'index.phtml', $args);
     });
 
+    //Only for developing FE. Refactor when creating proper Route path
+    $app->get('/users', function (Request $request, Response $response, array $args) use ($container) {
+        return $container->get('renderer')->render($response, 'users.phtml', $args);
+    });
+
+
 };

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hvorB Main Page</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="/public/css/normalize.css"/>
+    <link type="text/css" rel="stylesheet" href="./css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/xmc2tza.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>hvorB.</h1>
+        <h2>Find User</h2>
+        <div class="findUserContainer">
+            <form method="post" name="findUserForm">
+                <input type="text" name="firstName" id="input-first-name" placeholder="First name..." class="col-md-4 formInputs">
+                <input type="text" name="surname" id="input-surname" placeholder="Surname..." class="col-md-4 formInputs">
+                <input type="text" name="company" id="input-company" placeholder="Known company..." class="col-md-4 formInputs">
+                <input type="email" name="email" id="input-email" placeholder="Known email..." class="col-md-4 formInputs">
+                <button type="submit" value="submit" id="findUser-submit" class="btn btn-success">Find User</button>
+            </form>
+        </div>
+        <div class="findUserResultsBox col-md-9">
+            <h4>Find user results:</h4>
+            <div class="findUserResultItem col-md-5" id="user-result-name">Bob Dylan</div>
+            <div class="findUserResultItem col-md-5" id="user-result-email">bob@bean.com</div>
+            <div class="findUserResultItem col-md-5" id="user-result-company">Beans & Bobins Ltd</div>
+            <div class="findUserResultItem col-md-5" id="user-result-phone">01276 3892834</div>
+        </div>
+        <h2 class="currentUsersTitle">Current users</h2>
+        <button id="update-match" class="btn btn-success">Update Match</button>
+        <p>To find a particular user, click the relevant user's table row.</p>
+        <table class="table table-hover">
+            <tbody id="users-table">
+                <tr>
+                    <th>Name</th>
+                    <th>Company</th>
+                    <th>Email</th>
+                    <th>Match</th>
+                </tr>
+                <!-- static version for build. To be placed in viewHelper -->
+                <tr class="table-row" data-id="X">
+                    <td>Full Name</td>
+                    <td>Another Company</td>
+                    <td>person@company.com</td>
+                    <td>True</td>
+                </tr>
+                <!-- table-warning to be placed using IF statment to check if matchCurrent true -->
+                <tr class="table-row table-warning" data-id="X">
+                    <td>Another Name</td>
+                    <td>Company Ltd</td>
+                    <td>email@email.com</td>
+                    <td>False</td>
+                </tr>
+                <?php echo \WBApp\ViewHelpers\UsersViewHelper::displayUsers($data) ?>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
