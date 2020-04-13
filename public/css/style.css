@@ -12,7 +12,7 @@ body {
 
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: brandon-grotesque, sans-serif;
 }
 
@@ -31,5 +31,17 @@ h1 {
 
 #findUser-submit {
     display: block;
-    margin-top: 10px;
+    margin: 10px 0;
+}
+
+.findUserResultsBox {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #28a745;
+    border-radius: 5px;
+}
+
+.findUserResultItem {
+    margin: 5px 5px 5px 0;
+    display: inline-block;
 }

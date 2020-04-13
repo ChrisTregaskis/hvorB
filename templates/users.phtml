@@ -19,12 +19,19 @@
         <h2>Find User</h2>
         <div class="findUserContainer">
             <form method="post" name="findUserForm">
-                <input type="text" name="firstName" id="input-first-name" placeholder="First name..." class="col-5 formInputs">
-                <input type="text" name="surname" id="input-surname" placeholder="Surname..." class="col-5 formInputs">
-                <input type="text" name="company" id="input-company" placeholder="Known company..." class="col-5 formInputs">
-                <input type="email" name="email" id="input-email" placeholder="Known email..." class="col-5 formInputs">
+                <input type="text" name="firstName" id="input-first-name" placeholder="First name..." class="col-md-4 formInputs">
+                <input type="text" name="surname" id="input-surname" placeholder="Surname..." class="col-md-4 formInputs">
+                <input type="text" name="company" id="input-company" placeholder="Known company..." class="col-md-4 formInputs">
+                <input type="email" name="email" id="input-email" placeholder="Known email..." class="col-md-4 formInputs">
                 <button type="submit" value="submit" id="findUser-submit" class="btn btn-success">Find User</button>
             </form>
+        </div>
+        <div class="findUserResultsBox col-md-9">
+            <h4>Find user results:</h4>
+            <div class="findUserResultItem col-md-5" id="user-result-name">Bob Dylan</div>
+            <div class="findUserResultItem col-md-5" id="user-result-email">bob@bean.com</div>
+            <div class="findUserResultItem col-md-5" id="user-result-company">Beans & Bobins Ltd</div>
+            <div class="findUserResultItem col-md-5" id="user-result-phone">01276 3892834</div>
         </div>
 
 
