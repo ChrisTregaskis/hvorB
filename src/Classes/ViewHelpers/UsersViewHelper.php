@@ -17,7 +17,7 @@ class UsersViewHelper
         foreach ($users as $user) {
             if ($user instanceof UserEntity) {
 
-                if ($user->getUserMatchCurrent() === 0) {
+                if ($user->getUserMatchCurrent() == 1) {
                     $trClass = 'class="table-row table-warning"';
                 } else {
                     $trClass = 'class="table-row"';
@@ -27,7 +27,7 @@ class UsersViewHelper
                 $result .=      '<td>'. $user->getUserFullName().'</td>';
                 $result .=      '<td>'. $user->getUserKnownCompany().'</td>';
                 $result .=      '<td>'. $user->getUserKnownEmail().'</td>';
-                $result .=      '<td>'. $user->getUserMatchCurrent().'</td>';
+                $result .=      '<td class="apiMatch">'. $user->getUserMatchCurrent().'</td>';
                 $result .= '</tr>';
             }
         }

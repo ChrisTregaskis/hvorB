@@ -19,6 +19,7 @@ class UserEntity extends ValidationEntity implements \JsonSerializable
         $sname = null,
         $fullName = null,
         $knownCompany = null,
+        $knownEmail = null,
         $companyAPIResult = null,
         $matchPrevious = null,
         $matchCurrent = null)
@@ -27,6 +28,7 @@ class UserEntity extends ValidationEntity implements \JsonSerializable
         $this->sname = ($this->sname ?? $sname);
         $this->fullName = ($this->fullName ?? $fullName);
         $this->knownCompany = ($this->knownCompany ?? $knownCompany);
+        $this->knownEmail = ($this->knownEmail ?? $knownEmail);
         $this->companyAPIResult = ($this->companyAPIResult ?? $companyAPIResult);
         $this->matchPrevious = ($this->matchPrevious ?? $matchPrevious);
         $this->matchCurrent = ($this->matchCurrent ?? $matchCurrent);

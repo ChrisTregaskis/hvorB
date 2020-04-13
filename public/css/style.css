@@ -62,3 +62,7 @@ h1 {
 .table-row {
     cursor: pointer;
 }
+
+.apiMatch {
+    text-align: center;
+}
