@@ -2,7 +2,7 @@
 
 namespace WBApp\ViewHelpers;
 
-use \WBApp\Entities\UsersEntity;
+use \WBApp\Entities\UserEntity;
 
 class UsersViewHelper
 {
