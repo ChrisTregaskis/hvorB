@@ -16,6 +16,10 @@ h1, h2, h3, h4 {
     font-family: brandon-grotesque, sans-serif;
 }
 
+.container {
+    overflow: auto;
+}
+
 h1 {
     text-align: center;
     font-size: 5rem;
@@ -44,4 +48,17 @@ h1 {
 .findUserResultItem {
     margin: 5px 5px 5px 0;
     display: inline-block;
+}
+
+.currentUsersTitle {
+    display: inline-block;
+}
+
+#update-match {
+    float: right;
+    display: inline-block;
+}
+
+.table-row {
+    cursor: pointer;
 }
